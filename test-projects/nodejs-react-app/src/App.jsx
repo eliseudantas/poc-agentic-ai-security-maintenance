@@ -2,6 +2,9 @@ import React from "react";
 import pkg from "../package.json";
 
 export default function App() {
+   // This is intentionally vulnerable to test code scanning tools. 
+   const userInput = new URLSearchParams(window.location.search).get("msg");
+
   return (
     <main className="app">
       <h1>Node.js React App</h1>
@@ -18,6 +21,9 @@ export default function App() {
             </li>
           ))}
         </ul>
+      </section>
+      <section>
+        <div dangerouslySetInnerHTML={{ __html: userInput }} />
       </section>
     </main>
   );
