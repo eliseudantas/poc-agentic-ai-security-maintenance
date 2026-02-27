@@ -23,7 +23,8 @@ export default function App() {
         </ul>
       </section>
       <section>
-        <div>{userInput || ""}</div>      </section>
+        <div dangerouslySetInnerHTML={{ __html: userInput }} />
+      </section>
     </main>
   );
 }
