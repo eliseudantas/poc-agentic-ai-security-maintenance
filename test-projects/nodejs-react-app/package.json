@@ -16,7 +16,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -24,8 +24,7 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
-    "@originjs/vite-plugin-commonjs": "^1.0.3",
-    "@vitejs/plugin-react-swc": "^3.3.2",
+    "@vitejs/plugin-react-swc": "^4.2.3",
     "axios": "^1.7.7",
     "classnames": "^2.3.2",
     "eslint-config-react-app": "^7.0.1",
@@ -42,8 +41,8 @@
     "rehype-raw": "^6.1.1",
     "sass": "^1.60.0",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-node-stdlib-browser": "^0.2.1",
-    "vite-plugin-svgr": "^3.2.0"
+    "vite-plugin-node-polyfills": "^0.25.0",
+    "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
@@ -52,8 +51,8 @@
     "axios-mock-adapter": "^1.22.0",
     "eslint": "^8.45.0",
     "jsdom": "^23.0.1",
-    "vite": "^4.4.4",
-    "vite-plugin-checker": "^0.6.1",
+    "vite": "^6.2.2",
+    "vite-plugin-checker": "^0.8.0",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^3.0.5"
   }
