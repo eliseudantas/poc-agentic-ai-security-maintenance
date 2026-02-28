@@ -22,9 +22,6 @@ export default function App() {
           ))}
         </ul>
       </section>
-      <section>
-        <div dangerouslySetInnerHTML={{ __html: userInput }} />
-      </section>
     </main>
   );
 }
