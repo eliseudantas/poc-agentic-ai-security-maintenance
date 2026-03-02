@@ -47,8 +47,8 @@ export default defineConfig(({ mode }) => {
       exclude: ["node_modules", "build"],
     },
     define: {
-      "process.env.REACT_APP_SKYNET_PLATFORM_URL": JSON.stringify(
-        env.REACT_APP_SKYNET_PLATFORM_URL
+      "process.env.REACT_APP_SOME_PLATFORM_URL": JSON.stringify(
+        env.REACT_APP_SOME_PLATFORM_URL
       ),
       "process.env.REACT_APP_DEFAULT_LANG": JSON.stringify(
         env.REACT_APP_DEFAULT_LANG
