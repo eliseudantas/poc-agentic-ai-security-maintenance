@@ -21,15 +21,19 @@ jobs:
         with:
           node-version: '18.x'
           cache: 'npm'
+          cache-dependency-path: test-projects/nodejs-react-app/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: test-projects/nodejs-react-app
 
       - name: Run tests
         run: npm test
+        working-directory: test-projects/nodejs-react-app
 
       - name: Run tests with coverage
         run: npm run test:cov
+        working-directory: test-projects/nodejs-react-app
 
   build:
     runs-on: ubuntu-latest
@@ -44,16 +48,19 @@ jobs:
         with:
           node-version: '18.x'
           cache: 'npm'
+          cache-dependency-path: test-projects/nodejs-react-app/package-lock.json
 
       - name: Install dependencies
         run: npm ci
+        working-directory: test-projects/nodejs-react-app
 
       - name: Build project
         run: npm run build
+        working-directory: test-projects/nodejs-react-app
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build
-          path: dist/
+          path: test-projects/nodejs-react-app/dist/
           retention-days: 7
