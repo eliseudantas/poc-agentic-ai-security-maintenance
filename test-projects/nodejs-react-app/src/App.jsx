@@ -1,9 +1,11 @@
 import React from "react";
+import DOMPurify from "dompurify";
 import pkg from "../package.json";
 
 export default function App() {
-   // This is intentionally vulnerable to test code scanning tools. 
-   const userInput = new URLSearchParams(window.location.search).get("msg");
+  // This is intentionally vulnerable to test code scanning tools.
+  const userInput = new URLSearchParams(window.location.search).get("msg");
+  const sanitizedUserInput = DOMPurify.sanitize(userInput);
 
   return (
     <main className="app">
@@ -23,8 +25,9 @@ export default function App() {
         </ul>
       </section>
       <section>
-        <div dangerouslySetInnerHTML={{ __html: userInput }} />
+        <div>{sanitizedUserInput}</div>
       </section>
     </main>
   );
 }
+
