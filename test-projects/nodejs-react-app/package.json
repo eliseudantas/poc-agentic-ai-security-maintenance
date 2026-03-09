@@ -40,10 +40,13 @@
     "redux-devtools-extension": "^2.13.2",
     "redux-saga": "^0.16.0",
     "rehype-raw": "^6.1.1",
-    "sass": "^1.60.0",
+    "sass": "^1.97.3",
     "vite-plugin-eslint": "^1.8.1",
     "vite-plugin-node-stdlib-browser": "^0.2.1",
     "vite-plugin-svgr": "^3.2.0"
+  },
+  "overrides": {
+    "immutable": "^5.1.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.1.5",
