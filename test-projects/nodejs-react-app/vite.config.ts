@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       nodePolyfills(),
-      ...(mode !== "production" ? [eslint()] : []),
+      ...(mode === "development" ? [eslint()] : []),
       esbuildCommonjs(),
       svgr(),
     ],
