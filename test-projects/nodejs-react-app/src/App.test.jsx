@@ -10,7 +10,7 @@ describe("App", () => {
   it("renders node version section", () => {
     render(<App />);
     expect(screen.getByText(/node version/i)).toBeInTheDocument();
-    expect(screen.getByText("18.x")).toBeInTheDocument();
+    expect(screen.getByText(">=24.0.0")).toBeInTheDocument();
   });
 
   it("renders package versions section", () => {
